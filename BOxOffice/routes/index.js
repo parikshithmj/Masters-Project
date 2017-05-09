@@ -7,7 +7,8 @@ var router = express.Router();
 //mlab uri
 var uri = 'mongodb://successpredictor:cmpe295@ds155130.mlab.com:55130/boxoffice';
 //connect to mlab 
-var db = mongojs( uri, ['registration'], ['userVote']);
+var coll = ['registration', 'userVote','fbreactions','youtubeStats','registration','upcomingMovies','GenreId'];
+var db = mongojs( uri, coll);
 //imdb api
 var imdb = require('imdb-api');
 var movieName = "";
